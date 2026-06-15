@@ -16,6 +16,39 @@ Unlike traditional Tower Defense games, players do not build towers. Instead, th
 
 ---
 
+## This repository
+
+### How to clone
+```bash
+git clone -b dev https://github.com/nilernous/ash-defender.git
+```
+
+---
+
+### How to create a new branch
+```bash
+git checkout -b feature/your-feature
+```
+
+Example:
+```bash
+git checkout -b feature/your-feature
+```
+
+---
+
+### How to push your code into repository
+```bash
+git push origin feature/your-feature
+```
+
+Example:
+```bash
+git push origin feature/auth
+```
+
+---
+
 # Story
 
 Many years ago, monsters emerged from the Abyss and invaded the world.
