@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using AshDefender.Features.Enemy.Domain.Entities;
-using AshDefender.Features.Enemy.Domain.Enums;
 using AshDefender.Features.Enemy.Domain.Interfaces;
 using AshDefender.ScriptableObjects;
 
 namespace AshDefender.Features.Enemy.Infrastructure.Repositories
 {
+    using Enemy = global::AshDefender.Features.Enemy.Domain.Entities.Enemy;
+    using DomainEnemyType = global::AshDefender.Features.Enemy.Domain.Enums.EnemyType;
+
     public class EnemyRepository : IEnemyRepository
     {
         private readonly Dictionary<string, Enemy> _enemies = new();
@@ -33,23 +35,23 @@ namespace AshDefender.Features.Enemy.Infrastructure.Repositories
         public Boss GetBossById(string bossId) =>
             _bosses.TryGetValue(bossId, out var b) ? b : null;
 
-        private static EnemyType MapEnemyType(AshDefender.ScriptableObjects.EnemyType soType) =>
+        private static DomainEnemyType MapEnemyType(EnemyType soType) =>
             soType switch
             {
-                AshDefender.ScriptableObjects.EnemyType.Slime => EnemyType.Slime,
-                AshDefender.ScriptableObjects.EnemyType.Goblin => EnemyType.Goblin,
-                AshDefender.ScriptableObjects.EnemyType.Spider => EnemyType.Spider,
-                AshDefender.ScriptableObjects.EnemyType.MushroomMonster => EnemyType.MushroomMonster,
-                AshDefender.ScriptableObjects.EnemyType.Skeleton => EnemyType.Skeleton,
-                AshDefender.ScriptableObjects.EnemyType.Bat => EnemyType.Bat,
-                AshDefender.ScriptableObjects.EnemyType.GoblinWarrior => EnemyType.GoblinWarrior,
-                AshDefender.ScriptableObjects.EnemyType.IceSlime => EnemyType.IceSlime,
-                AshDefender.ScriptableObjects.EnemyType.IceGoblin => EnemyType.IceGoblin,
-                AshDefender.ScriptableObjects.EnemyType.SnowWolf => EnemyType.SnowWolf,
-                AshDefender.ScriptableObjects.EnemyType.DemonSlime => EnemyType.DemonSlime,
-                AshDefender.ScriptableObjects.EnemyType.DarkKnight => EnemyType.DarkKnight,
-                AshDefender.ScriptableObjects.EnemyType.FireBat => EnemyType.FireBat,
-                _ => EnemyType.Slime
+                EnemyType.Slime => DomainEnemyType.Slime,
+                EnemyType.Goblin => DomainEnemyType.Goblin,
+                EnemyType.Spider => DomainEnemyType.Spider,
+                EnemyType.MushroomMonster => DomainEnemyType.MushroomMonster,
+                EnemyType.Skeleton => DomainEnemyType.Skeleton,
+                EnemyType.Bat => DomainEnemyType.Bat,
+                EnemyType.GoblinWarrior => DomainEnemyType.GoblinWarrior,
+                EnemyType.IceSlime => DomainEnemyType.IceSlime,
+                EnemyType.IceGoblin => DomainEnemyType.IceGoblin,
+                EnemyType.SnowWolf => DomainEnemyType.SnowWolf,
+                EnemyType.DemonSlime => DomainEnemyType.DemonSlime,
+                EnemyType.DarkKnight => DomainEnemyType.DarkKnight,
+                EnemyType.FireBat => DomainEnemyType.FireBat,
+                _ => DomainEnemyType.Slime
             };
     }
 }
