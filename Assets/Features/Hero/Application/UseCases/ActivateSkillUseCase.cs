@@ -2,6 +2,7 @@ using AshDefender.Features.Hero.Domain.Interfaces;
 using AshDefender.Shared.Core;
 using AshDefender.Shared.Events;
 using AshDefender.Shared.Exceptions;
+using System.Linq;
 
 namespace AshDefender.Features.Hero.Application.UseCases
 {

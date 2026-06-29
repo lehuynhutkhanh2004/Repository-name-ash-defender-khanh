@@ -6,6 +6,8 @@ using AshDefender.ScriptableObjects;
 
 namespace AshDefender.Features.Wave.Infrastructure.Repositories
 {
+    using Wave = global::AshDefender.Features.Wave.Domain.Entities.Wave;
+
     public class WaveRepository : IWaveRepository
     {
         private readonly Dictionary<string, List<Wave>> _stageWaves = new();

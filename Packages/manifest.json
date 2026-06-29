@@ -1,5 +1,17 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp",
+        "jp.hadashikick"
+      ]
+    }
+  ],
   "dependencies": {
+    "com.cysharp.unitask": "2.5.10",
+    "jp.hadashikick.vcontainer": "1.16.8",
     "com.unity.2d.animation": "14.0.3",
     "com.unity.2d.aseprite": "4.0.1",
     "com.unity.2d.psdimporter": "13.0.2",

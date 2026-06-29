@@ -1,8 +1,9 @@
 using System.Collections.Generic;
-using AshDefender.Features.CommanderSkill.Domain.Entities;
 
 namespace AshDefender.Features.CommanderSkill.Domain.Interfaces
 {
+    using CommanderSkill = global::AshDefender.Features.CommanderSkill.Domain.Entities.CommanderSkill;
+
     public interface ICommanderSkillRepository
     {
         CommanderSkill GetById(string skillId);

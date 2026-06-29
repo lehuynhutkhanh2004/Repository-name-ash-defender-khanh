@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
-using AshDefender.Features.CommanderSkill.Domain.Entities;
 using AshDefender.Features.CommanderSkill.Domain.Enums;
 using AshDefender.Features.CommanderSkill.Domain.Interfaces;
 using AshDefender.ScriptableObjects;
 
 namespace AshDefender.Features.CommanderSkill.Infrastructure.Repositories
 {
+    using CommanderSkill = global::AshDefender.Features.CommanderSkill.Domain.Entities.CommanderSkill;
+    using SkillType = global::AshDefender.Features.CommanderSkill.Domain.Enums.SkillType;
+
     public class CommanderSkillRepository : ICommanderSkillRepository
     {
         private readonly Dictionary<string, CommanderSkill> _skills = new();
