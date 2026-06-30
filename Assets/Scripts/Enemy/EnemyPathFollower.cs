@@ -15,6 +15,7 @@ public class EnemyPathFollower : MonoBehaviour
 
     private int currentWaypointIndex = 0;
     private SpriteRenderer spriteRenderer;
+    private bool hasReachedCore = false;
 
     private void Awake()
     {
@@ -23,6 +24,11 @@ public class EnemyPathFollower : MonoBehaviour
 
     private void Update()
     {
+        if (hasReachedCore)
+        {
+            return;
+        }
+
         if (waypoints == null || waypoints.Count == 0)
         {
             return;
@@ -74,20 +80,31 @@ public class EnemyPathFollower : MonoBehaviour
 
     private void ReachCore()
     {
+        hasReachedCore = true;
+
         EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
-
-        int damageToCore = 10;
-
-        if (enemyHealth != null)
-        {
-            damageToCore = enemyHealth.coreDamage;
-        }
-
         BaseCoreHealth core = FindFirstObjectByType<BaseCoreHealth>();
 
         if (core != null)
         {
-            core.TakeDamage(damageToCore);
+            if (enemyHealth != null && enemyHealth.isBoss)
+            {
+                Debug.Log("Boss reached Core. Player loses.");
+
+                // Boss vào Core thì thua luôn
+                core.TakeDamage(999999);
+            }
+            else
+            {
+                int damageToCore = 10;
+
+                if (enemyHealth != null)
+                {
+                    damageToCore = enemyHealth.coreDamage;
+                }
+
+                core.TakeDamage(damageToCore);
+            }
         }
 
         Debug.Log(gameObject.name + " reached the Core!");
@@ -106,5 +123,6 @@ public class EnemyPathFollower : MonoBehaviour
     {
         waypoints = newWaypoints;
         currentWaypointIndex = 0;
+        hasReachedCore = false;
     }
 }

@@ -51,10 +51,29 @@ public class MapWaveSpawner : MonoBehaviour
     private int pathToggle = 0;
     private MapGameManager gameManager;
 
+    [Header("Start Control")]
+    public bool autoStart = false;
+
+    private Coroutine waveCoroutine;
+
     private void Start()
     {
         gameManager = FindFirstObjectByType<MapGameManager>();
-        StartCoroutine(SpawnAllWavesThenBoss());
+
+        if (autoStart)
+        {
+            StartWaves();
+        }
+    }
+
+    public void StartWaves()
+    {
+        if (waveCoroutine != null)
+        {
+            return;
+        }
+
+        waveCoroutine = StartCoroutine(SpawnAllWavesThenBoss());
     }
 
     private IEnumerator SpawnAllWavesThenBoss()

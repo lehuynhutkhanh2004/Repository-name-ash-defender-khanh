@@ -97,10 +97,14 @@ public class EnemyHealth : MonoBehaviour
         {
             if (isBoss)
             {
-                gameManager.RegisterBossDied();
+                // Boss vào Core thì KHÔNG tính là boss chết
+                // Không gọi RegisterBossDied ở đây
+                Debug.Log("Boss reached the Core. This is not a win.");
             }
             else
             {
+                // Enemy thường vào Core thì giảm số quái còn lại trong wave
+                // Không cộng gold
                 ReportRemovedFromWave(gameManager);
             }
         }
