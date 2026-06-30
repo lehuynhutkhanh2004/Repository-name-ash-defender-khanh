@@ -1,5 +1,17 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp",
+        "jp.hadashikick"
+      ]
+    }
+  ],
   "dependencies": {
+    "com.cysharp.unitask": "2.5.10",
+    "jp.hadashikick.vcontainer": "1.16.8",
     "com.unity.2d.animation": "14.0.3",
     "com.unity.2d.aseprite": "4.0.1",
     "com.unity.2d.psdimporter": "13.0.2",
@@ -14,8 +26,10 @@
     "com.unity.inputsystem": "1.19.0",
     "com.unity.multiplayer.center": "1.0.1",
     "com.unity.render-pipelines.universal": "17.4.0",
+    "com.unity.sdk.linux-x86_64": "1.1.0",
     "com.unity.test-framework": "1.6.0",
     "com.unity.timeline": "1.8.12",
+    "com.unity.toolchain.linux-x86_64-linux": "1.1.0",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.11",
     "com.unity.modules.accessibility": "1.0.0",
