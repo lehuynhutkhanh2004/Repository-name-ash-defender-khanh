@@ -1,0 +1,14 @@
+NOI DUNG BAO CAO PHAN MAP - ASH DEFENDER
+========================================
+
+Map duoc thiet ke theo cau truc cua game Hero Defense 2D. Thay vi yeu cau nguoi choi xay thap phong thu, game cho phep nguoi choi trien khai cac Hero/Unit vao cac diem chien luoc de ngan chan enemy tien den Core.
+
+Ban do Map_01_AshForest duoc xay dung voi bo cuc chinh gom: diem enemy spawn, cac tuyen duong di chuyen, khu vuc dat hero va Core_LastFlame. Enemy co the xuat hien tu nhieu huong khac nhau nhu ben trai, phia tren va goc duoi trai doi voi boss. Tat ca cac duong di deu hoi tu ve khu vuc Core, tao nen ap luc phong thu cho nguoi choi.
+
+Cac DeployPoint duoc dat o hai ben duong di cua enemy. Cach sap xep nay giup nguoi choi co the lua chon vi tri dat Hero phu hop de toi uu sat thuong va ngan chan enemy. Nhung vi tri gan khuc cua duong di co gia tri chien thuat cao vi hero co the tan cong enemy trong thoi gian lau hon.
+
+Core_LastFlame duoc dat o phia cuoi ban do, dong vai tro la muc tieu can bao ve. Neu enemy di den Core, he thong co the xu ly tru mau Core hoac tinh la nguoi choi that bai khi Core HP ve 0. Dieu nay phu hop voi defeat condition cua game: nguoi choi thua khi Core bi pha huy.
+
+Ban do su dung anh nen 2D hoan chinh thay vi ve tung tile rieng le. Cach lam nay giup rut ngan thoi gian phat trien, phu hop voi project hoc tap va demo. Logic gameplay van duoc tach rieng bang cac object SpawnPoint, Waypoint, Path va DeployPoint, giup code wave system va deployment system de quan ly hon.
+
+Cau truc map ho tro mo rong ve sau. Nhom co the them cac map khac nhu Dungeon, Poison Swamp hoac Frozen Fortress bang cach thay doi anh nen, tao cac path moi va bo tri lai DeployPoint. Dieu nay phu hop voi dinh huong level-based progression cua Ash Defender.

@@ -1,0 +1,129 @@
+HUONG DAN IMPORT MAP ASH DEFENDER
+=================================
+
+FILE NAY LA BO MAP SAN, KHONG CAN TU VE TILEMAP.
+Ban chi can copy folder Assets trong file zip vao project Unity cua ban.
+
+------------------------------
+1. IMPORT VAO UNITY
+------------------------------
+
+Buoc 1:
+Giai nen file AshDefender_MapReady.zip
+
+Buoc 2:
+Copy thu muc:
+Assets/AshDefender_MapReady
+
+vao thu muc Assets cua project Unity hien tai.
+
+Sau khi copy xong, trong Unity se thay:
+Assets/AshDefender_MapReady/Art/Maps/Map_01_AshForest.png
+Assets/AshDefender_MapReady/Scripts
+Assets/AshDefender_MapReady/Editor
+Assets/AshDefender_MapReady/Docs
+
+------------------------------
+2. TAO MAP TU DONG
+------------------------------
+
+Trong Unity, tren thanh menu chon:
+Tools > Ash Defender > Build Map 01 - Ash Forest
+
+Sau khi bam, Unity se tu tao trong Hierarchy:
+
+Map_01_AshForest_Root
+|-- Map_Background
+|-- Important_Points
+|   |-- SpawnPointA_Left
+|   |-- SpawnPointB_Top
+|   |-- BossSpawnPoint_BottomLeft
+|   |-- Core_LastFlame
+|-- Enemy_Paths
+|   |-- Path_A_LeftToCore
+|   |-- Path_B_TopToCore
+|   |-- BossPath_BottomToCore
+|-- DeployPoints
+|   |-- DeployPoint_01 ... DeployPoint_10
+|-- Managers_ConnectYourWaveAndDeployScriptsHere
+
+------------------------------
+3. CAC PHAN DA CO SAN
+------------------------------
+
+Map_Background:
+Anh map nen da ve san, khong can ve tilemap.
+
+SpawnPointA_Left:
+Diem enemy spawn tu ben trai.
+
+SpawnPointB_Top:
+Diem enemy spawn tu phia tren.
+
+BossSpawnPoint_BottomLeft:
+Diem boss spawn tu goc duoi trai.
+
+Core_LastFlame:
+Diem can bao ve. Enemy di den day thi nguoi choi bi mat mau core.
+
+Path_A_LeftToCore:
+Duong enemy di tu trai vao Core.
+
+Path_B_TopToCore:
+Duong enemy di tu tren vao Core.
+
+BossPath_BottomToCore:
+Duong boss di tu duoi trai vao Core.
+
+DeployPoint_01 den DeployPoint_10:
+Cac vi tri dat Hero/Unit hai ben duong di.
+
+------------------------------
+4. GAN VAO SYSTEM HIEN CO CUA BAN
+------------------------------
+
+Neu project cua ban da co Wave System:
+- Lay SpawnPointA_Left hoac SpawnPointB_Top lam spawn position.
+- Lay Path_A_LeftToCore hoac Path_B_TopToCore lam danh sach waypoint.
+- Lay Core_LastFlame lam muc tieu cuoi cung.
+
+Neu project cua ban da co Deploy System:
+- Dung cac object trong DeployPoints lam vi tri dat hero.
+
+Neu project cua ban chua co enemy movement:
+- Co the dung script AshEnemyWaypointMover de test enemy chay theo path.
+
+------------------------------
+5. KIEM TRA MAP GUIDE
+------------------------------
+
+Mo file:
+Assets/AshDefender_MapReady/Art/Maps/Map_01_AshForest_Guide.png
+
+File nay co label:
+- Spawn A
+- Spawn B
+- Boss Spawn
+- Core
+- Duong mau vang la duong enemy di
+- Vong tron xanh la vi tri dat Hero
+
+------------------------------
+6. LUU Y
+------------------------------
+
+Neu menu Tools > Ash Defender khong hien:
+- Doi Unity compile script xong.
+- Mo Console xem co loi code nao khong.
+- Dam bao file AshMapAutoBuilder.cs nam trong folder Editor.
+
+Neu map bi qua lon/qua nho:
+- Chon Main Camera.
+- Chinh Orthographic Size khoang 5.8 den 6.2.
+
+Neu anh map khong hien:
+- Chon Map_01_AshForest.png.
+- Inspector > Texture Type = Sprite (2D and UI).
+- Sprite Mode = Single.
+- Pixels Per Unit = 100.
+- Bam Apply.
