@@ -1,0 +1,21 @@
+HUONG DAN CHAY LHNK-MAP
+
+1. Giai nen file zip nay vao thu muc goc cua project Unity.
+   Vi du: thu muc project cua ban co Assets/ thi giai nen de file nam trong Assets/Scenes/...
+
+2. Trong Unity mo scene:
+   Assets/Scenes/LHNK-Map-Playable.unity
+
+3. Bam Play.
+
+4. Cach choi:
+   - Bam Start tren man hinh.
+   - Click vao cac o xanh de dat hero/tower.
+   - Enemy di tu 3 cong: ben trai, ben tren, goc duoi trai.
+   - Bao ve Core mau vang ben phai qua 3 wave + boss.
+
+Thong tin map:
+- Ten scene: LHNK-Map-Playable
+- Map co cau truc giong mau: duong ngang giua, duong doc tu tren, duong cheo tu duoi trai, tat ca di ve core ben phai.
+- Hinh anh/trang tri da doi sang forest ruin: co, da, cay, crystal xanh, cong portal tim, core vang.
+- Khong can prefab, khong can Tile Palette, khong can asset ngoai.

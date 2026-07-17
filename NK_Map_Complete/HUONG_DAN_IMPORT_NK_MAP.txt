@@ -1,0 +1,60 @@
+HUONG DAN IMPORT NK MAP COMPLETE
+================================
+
+1) Giai nen file NK_Map_Full_Ready.zip.
+
+2) Copy nguyen thu muc:
+   NK_Map_Complete
+
+   vao thu muc Assets cua project Unity.
+
+Dung duong dan phai la:
+   Assets/NK_Map_Complete
+
+Khong de thanh:
+   Assets/Assets/NK_Map_Complete
+
+3) Quay lai Unity, cho Unity compile xong.
+
+4) Tren thanh menu Unity bam:
+   Tools -> Ash Defender -> Build NK Full Map
+
+5) Unity se tu tao Hierarchy giong cau truc:
+
+   Main Camera
+   Grid_Dungeon
+      Ground_Tilemap
+      Path_Tilemap
+      Wall_Tilemap
+      Obstacle_Tilemap
+      Decoration_Tilemap
+      Trap_Tilemap
+      BuildSlot_Tilemap
+   GameplayObjects_Map03
+      SpawnPoints
+      Waypoints
+      Base
+      HeroArea
+      HeroSlots
+      EnemyContainer
+      BossContainer
+      ProjectileContainer
+      ItemDropContainer
+      TrapObjects
+      UI
+   EventSystem
+   Map03_GameManager
+   UIController
+
+6) De test enemy chay:
+   - Chon Map03_GameManager
+   - Trong component NKSimpleWaveSpawner:
+     + keo prefab Enemy vao Enemy Prefab
+     + keo prefab Boss vao Boss Prefab neu co
+     + bat Auto Start neu muon chay tu dong khi bam Play
+
+7) Bam Play de test.
+
+Neu khong thay menu Tools -> Ash Defender -> Build NK Full Map:
+   - Mo tab Console
+   - Neu co loi do, gui anh loi do de sua tiep.

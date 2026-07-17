@@ -1,0 +1,30 @@
+HUONG DAN CHAY NK-MAP PLAYABLE
+
+1. Giai nen file NK_Map_Playable_Ready.zip.
+2. Copy thu muc Assets vao thu muc project Unity cua ban.
+   Duong dan dung phai la:
+   Assets/Scenes/NK-Map-Playable.unity
+   Assets/Scenes/NK_PlayableMap/Scripts/NKPlayableMapGame.cs
+
+3. Quay lai Unity, doi no compile xong.
+4. Mo scene:
+   Assets > Scenes > NK-Map-Playable
+
+5. Bam Play.
+
+CACH CHOI:
+- Bam nut Start o giua man hinh.
+- Click vao cac o mau xanh tren map de dat Hero.
+- Hero se tu dong ban enemy.
+- Enemy di theo duong den Core ben phai.
+- Neu enemy den Core thi Core mat HP.
+- Qua 3 wave se thang.
+
+NEU SCENE KHONG HIEN MAP:
+- Vao menu: Tools > Ash Defender > Create Playable NK Map Scene
+- Unity se tao lai scene NK-Map-Playable.unity.
+
+LUU Y:
+- File nay khong can prefab enemy/hero.
+- File nay khong can tile palette.
+- Mo scene va bam Play la chay duoc.

@@ -1,0 +1,34 @@
+LHNK-MAP PLAYABLE - PRU
+
+CÁCH CÀI:
+1. Giải nén file ZIP.
+2. Copy thư mục Assets trong gói vào thư mục gốc project Unity.
+3. Chọn Merge/Replace nếu Windows hỏi.
+4. Đường dẫn đúng: Assets/Scenes/LHNK-Map.unity
+5. Chờ Unity compile xong, Console không còn lỗi đỏ.
+6. Mở Assets/Scenes/LHNK-Map.unity.
+7. Bấm Play.
+8. Trong Game View bấm BẮT ĐẦU.
+9. Bấm các nút Đặt 25 trên bệ để tạo Hero.
+
+KHÔNG CẦN:
+- Không cần prefab enemy.
+- Không cần prefab hero.
+- Không cần kéo thả Inspector.
+- Không cần Tile Palette.
+- Không phụ thuộc asset bên ngoài.
+
+NẾU SCENE KHÔNG HIỆN:
+Tools > LHNK > Create/Rebuild Playable LHNK-Map
+
+TÍNH NĂNG:
+- 3 cổng xuất hiện quái.
+- Đường đi hoàn toàn mới.
+- 10 vị trí đặt Hero.
+- Hero tự bắn.
+- Projectile gây sát thương.
+- HP của enemy.
+- Gold, Core HP, 4 Wave.
+- Boss cuối.
+- Pause, thắng, thua, chơi lại.
+- Map đã được hạ xuống 0.35 đơn vị để bố cục Game View cân đối hơn.

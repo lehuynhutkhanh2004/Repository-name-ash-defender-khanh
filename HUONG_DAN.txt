@@ -1,0 +1,9 @@
+HUONG DAN IMPORT SCENE NK-MAP-SCENEREADY
+
+1. Giai nen file zip.
+2. Copy thu muc Assets vao thu muc project Unity cua ban.
+3. Trong Unity mo: Assets/Scenes/NK-Map-SceneReady.unity
+4. Scene se co san: Main Camera, Grid_Dungeon, GameplayObjects_Map03, EventSystem, Map03_GameManager, UIController.
+5. Map nen da co san trong Grid_Dungeon/MapImage_Background.
+
+Luu y: copy dung duong dan, khong de thanh Assets/Assets/...

@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameUIController : MonoBehaviour
 {
     [Header("Panels")]
     public GameObject startPanel;
     public GameObject pausePanel;
+    public Button startButton;
 
     [Header("Spawner")]
     public MapWaveSpawner mapWaveSpawner;
@@ -30,12 +32,17 @@ public class GameUIController : MonoBehaviour
         {
             mapWaveSpawner = FindFirstObjectByType<MapWaveSpawner>();
         }
+
+        Debug.Log(123);
+
     }
 
     public void StartGame()
     {
         gameStarted = true;
         isPaused = false;
+
+        Debug.Log(123);
 
         if (startPanel != null)
         {
@@ -65,6 +72,8 @@ public class GameUIController : MonoBehaviour
         {
             return;
         }
+
+        Debug.Log(000);
 
         isPaused = true;
 

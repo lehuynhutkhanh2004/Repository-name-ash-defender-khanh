@@ -1,0 +1,25 @@
+MO TA PHAN MAP CHO BAO CAO
+==========================
+
+Map NK-Map / Map_03_Dungeon duoc thiet ke theo cau truc 2D Hero Defense. Map co cac thanh phan chinh gom nen dungeon, duong di cua enemy, tuong, vat can, trang tri, trap va cac vi tri build slot de nguoi choi dat hero/unit.
+
+Cau truc map:
+- Ground_Tilemap: nen chinh cua map dungeon.
+- Path_Tilemap: duong enemy di chuyen ve Core.
+- Wall_Tilemap: tuong bao quanh map, gioi han khu vuc chien dau.
+- Obstacle_Tilemap: vat can tren map.
+- Decoration_Tilemap: vat trang tri de map sinh dong hon.
+- Trap_Tilemap: khu vuc bay/trap co the gay sat thuong hoac lam cham enemy.
+- BuildSlot_Tilemap: cac o cho phep dat hero/unit.
+
+GameplayObjects_Map03 gom:
+- SpawnPoints: noi enemy va boss xuat hien.
+- Waypoints: tap hop cac diem dinh huong de enemy di theo duong.
+- Base: chua Core_LastFlame, muc tieu can bao ve.
+- HeroArea va HeroSlots: khu vuc va diem dat hero/unit.
+- EnemyContainer, BossContainer, ProjectileContainer, ItemDropContainer: cac container de quan ly object runtime khi choi.
+- TrapObjects: cac object trap co collider trigger.
+- UI: folder chua cac thanh phan UI cua map.
+
+Luong choi co ban:
+Enemy duoc spawn tu SpawnPoints, di chuyen theo Waypoints, tien ve Core_LastFlame. Nguoi choi dat hero/unit tai HeroSlots de ngan enemy pha huy Core. Khi tat ca wave bi danh bai va boss bi tieu diet, nguoi choi chien thang. Neu Core bi pha huy, nguoi choi that bai.
